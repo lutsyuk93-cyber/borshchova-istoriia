@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borscht Calculator — Scale Ingredients to Any Number of Servings | Borscht Story</title>
+    <meta name="description" content="Free online borscht calculator: enter the number of people and get exact ingredient amounts — meat, beet, potato, cabbage, spices, and water.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a94432">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="uk_UA">
+    <meta property="og:site_name" content="Borscht Story">
+    <meta property="og:title" content="Borscht Calculator — Ingredients for Any Number of Servings">
+    <meta property="og:description" content="Enter the number of people and instantly get a scaled ingredient list for borscht.">
+    <meta property="og:url" content="https://lutsyuk93-cyber.github.io/borshchova-istoriia/en/calculator.html">
+    <link rel="alternate" hreflang="en" href="https://lutsyuk93-cyber.github.io/borshchova-istoriia/en/calculator.html">
+    <link rel="alternate" hreflang="uk" href="https://lutsyuk93-cyber.github.io/borshchova-istoriia/kalkulyator.html">
+    <link rel="alternate" hreflang="x-default" href="https://lutsyuk93-cyber.github.io/borshchova-istoriia/kalkulyator.html">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Borscht Calculator",
+      "url": "https://lutsyuk93-cyber.github.io/borshchova-istoriia/en/calculator.html",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "description": "Calculates borscht ingredient amounts based on the number of servings.",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1VVGTC3S6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H1VVGTC3S6');
+</script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">✦</span>
+            Borscht Story
+        </a>
+
+        <div class="nav-wrap">
+            <nav class="main-nav">
+                <a href="index.html">Recipe</a>
+                <a href="calculator.html" class="active">Calculator</a>
+                <a href="types-of-borscht.html">Types</a>
+                <a href="serving.html">Serving</a>
+                <a href="tips.html">Tips</a>
+            </nav>
+            <div class="lang-switch">
+                <a href="../kalkulyator.html">UA</a>
+                <span class="lang-current">EN</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero container">
+        <div class="hero-content">
+            <p class="eyebrow">Exact proportions, no math required</p>
+
+            <h1>
+                Borscht Calculator
+                <span>for any size gathering</span>
+            </h1>
+
+            <p class="hero-description">
+                Cooking for two or for a big family dinner? Enter the
+                number of servings and the calculator instantly
+                recalculates every ingredient from the classic recipe.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#calc" class="button button-primary">Calculate ingredients</a>
+                <a href="index.html#steps" class="button button-secondary">View the recipe</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="recipe-note">
+                <p class="note-label">How it works</p>
+                <h2>Base — 6 servings</h2>
+                <p>
+                    All proportions in the calculator are built on
+                    the classic recipe for 6 servings and scale
+                    proportionally from there.
+                </p>
+                <div class="note-bottom"><span class="note-icon">🧮</span><span>From 1 to 30 servings</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="calc">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Your calculation</p>
+                <h2>How many people are you feeding?</h2>
+                <p>Type in the number of servings or use the buttons — the ingredient list updates automatically.</p>
+            </div>
+
+            <div class="calc-panel">
+                <div class="calc-controls">
+                    <button type="button" class="calc-step-btn" id="calc-minus" aria-label="Decrease number of servings">−</button>
+                    <div class="calc-input-wrap">
+                        <input type="number" id="calc-servings" value="6" min="1" max="30" step="1" inputmode="numeric" aria-label="Number of servings">
+                        <span>servings</span>
+                    </div>
+                    <button type="button" class="calc-step-btn" id="calc-plus" aria-label="Increase number of servings">+</button>
+                </div>
+                <div class="calc-presets">
+                    <button type="button" class="calc-chip" data-servings="2">2</button>
+                    <button type="button" class="calc-chip" data-servings="4">4</button>
+                    <button type="button" class="calc-chip" data-servings="6">6</button>
+                    <button type="button" class="calc-chip" data-servings="10">10</button>
+                    <button type="button" class="calc-chip" data-servings="15">15</button>
+                    <button type="button" class="calc-chip" data-servings="20">20</button>
+                </div>
+            </div>
+
+            <div class="ingredient-grid calc-grid" id="calc-results">
+                <article class="ingredient-card">
+                    <div class="card-icon">🍖</div>
+                    <h3>Base</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Bone-in meat</span><strong data-item="meat">—</strong></li>
+                        <li><span>Water</span><strong data-item="water">—</strong></li>
+                        <li><span>Bay leaf</span><strong data-item="bayleaf">—</strong></li>
+                        <li><span>Salt</span><strong>to taste</strong></li>
+                    </ul>
+                </article>
+
+                <article class="ingredient-card">
+                    <div class="card-icon">🥕</div>
+                    <h3>Vegetables</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Beet</span><strong data-item="beet">—</strong></li>
+                        <li><span>Potato</span><strong data-item="potato">—</strong></li>
+                        <li><span>Cabbage</span><strong data-item="cabbage">—</strong></li>
+                        <li><span>Carrot</span><strong data-item="carrot">—</strong></li>
+                        <li><span>Onion</span><strong data-item="onion">—</strong></li>
+                    </ul>
+                </article>
+
+                <article class="ingredient-card">
+                    <div class="card-icon">🌿</div>
+                    <h3>For flavor</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Tomato paste</span><strong data-item="tomato">—</strong></li>
+                        <li><span>Oil</span><strong data-item="oil">—</strong></li>
+                        <li><span>Garlic</span><strong data-item="garlic">—</strong></li>
+                        <li><span>Pepper</span><strong>to taste</strong></li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-symbol">🍲</span>
+                <div>
+                    <strong id="calc-pot-tip-title">Pot size</strong>
+                    <p id="calc-pot-tip">For 6 servings you'll need a pot of about 4–5 liters.</p>
+                </div>
+            </div>
+
+            <div class="tip-box" style="border-left-color: var(--red)">
+                <span class="tip-symbol">⏱</span>
+                <div>
+                    <strong>Cooking time barely changes</strong>
+                    <p>More servings affect the volume of ingredients, not the cooking time — the broth still needs 60–90 minutes. Exception: a very large pot may take longer to come to a boil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Frequently asked questions</p>
+                <h2>About scaling borscht servings</h2>
+            </div>
+            <div class="faq-grid">
+                <article class="faq-item">
+                    <h3>How much borscht is in one serving?</h3>
+                    <p>On average, one serving is about 350–400 ml of finished borscht — a full, deep bowl.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>Can I use this calculator for a meat-free version?</h3>
+                    <p>Yes — replace the water with vegetable broth and set the meat amount to 0. The rest of the vegetable proportions stay accurate.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>What if my pot is smaller than what's needed?</h3>
+                    <p>Reduce the number of servings in the calculator to match your pot's volume, or cook in two batches.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>Does the amount of spices scale proportionally too?</h3>
+                    <p>Salt and pepper are best added to taste in small increments, even if the calculator shows a large number of servings.</p>
+                </article>
+            </div>
+            <div class="bottom-link">
+                <a href="index.html" class="button button-primary">← Back to the full recipe</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Borscht Story</p>
+        <a href="#top">Back to top ↑</a>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var BASE_SERVINGS = 6;
+    var BASE = {
+        meat:   { amount: 500,  unit: 'g',  round: 10 },
+        water:  { amount: 2.5,  unit: 'l',  round: 0.25 },
+        bayleaf:{ amount: 2,    unit: 'pcs.', round: 1, minWhole: true },
+        beet:   { amount: 2,    unit: 'pcs.', round: 1, minWhole: true },
+        potato: { amount: 4,    unit: 'pcs.', round: 1, minWhole: true },
+        cabbage:{ amount: 300,  unit: 'g',  round: 25 },
+        carrot: { amount: 1,    unit: 'pcs.', round: 1, minWhole: true },
+        onion:  { amount: 1,    unit: 'pcs.', round: 1, minWhole: true },
+        tomato: { amount: 2,    unit: 'tbsp', round: 0.5 },
+        oil:    { amount: 2,    unit: 'tbsp', round: 0.5 },
+        garlic: { amount: 2.5,  unit: 'cloves', round: 1, minWhole: true }
+    };
+
+    var input = document.getElementById('calc-servings');
+    var results = document.getElementById('calc-results');
+    var potTip = document.getElementById('calc-pot-tip');
+
+    function roundTo(value, step) {
+        if (!step) return value;
+        var rounded = Math.round(value / step) * step;
+        return rounded;
+    }
+
+    function formatNumber(n) {
+        var rounded = Math.round(n * 100) / 100;
+        return rounded.toString();
+    }
+
+    function render(servings) {
+        servings = Math.max(1, Math.min(30, servings));
+        var ratio = servings / BASE_SERVINGS;
+
+        Object.keys(BASE).forEach(function (key) {
+            var cfg = BASE[key];
+            var raw = cfg.amount * ratio;
+            var value = roundTo(raw, cfg.round);
+            if (cfg.minWhole) {
+                value = Math.max(1, Math.round(value));
+            }
+            var el = results.querySelector('[data-item="' + key + '"]');
+            if (el) {
+                el.textContent = formatNumber(value) + ' ' + cfg.unit;
+            }
+        });
+
+        var literWater = roundTo(2.5 * ratio, 0.25);
+        var potSize = Math.ceil((literWater + 1.5) * 2) / 2;
+        potTip.textContent = 'For ' + servings + ' servings you\u2019ll need a pot of about ' + formatNumber(potSize) + '\u2013' + formatNumber(potSize + 1) + ' liters.';
+    }
+
+    function setServings(value) {
+        value = Math.max(1, Math.min(30, Math.round(value) || BASE_SERVINGS));
+        input.value = value;
+        render(value);
+    }
+
+    document.getElementById('calc-minus').addEventListener('click', function () {
+        setServings(parseInt(input.value, 10) - 1);
+    });
+    document.getElementById('calc-plus').addEventListener('click', function () {
+        setServings(parseInt(input.value, 10) + 1);
+    });
+    input.addEventListener('input', function () {
+        var v = parseInt(input.value, 10);
+        if (!isNaN(v)) render(Math.max(1, Math.min(30, v)));
+    });
+    input.addEventListener('change', function () {
+        setServings(parseInt(input.value, 10));
+    });
+    document.querySelectorAll('.calc-chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            setServings(parseInt(btn.getAttribute('data-servings'), 10));
+        });
+    });
+
+    render(BASE_SERVINGS);
+})();
+</script>
+
+</body>
+</html>

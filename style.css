@@ -1066,3 +1066,56 @@ h1 span {
         justify-content: center;
     }
 }
+
+/* Перемикач мов */
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.lang-switch a,
+.lang-switch span {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.lang-switch span.lang-current {
+    color: var(--white);
+    background: var(--red);
+}
+
+.lang-switch a {
+    color: var(--brown-light);
+    transition: 0.2s ease;
+}
+
+.lang-switch a:hover {
+    color: var(--red-dark);
+    background: #f7e4d0;
+}
+
+@media (max-width: 620px) {
+    .nav-wrap {
+        gap: 8px;
+    }
+    .lang-switch a,
+    .lang-switch span {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
