@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lutsyuk93-cyber.github.io/borshchova-istoriia/sitemap.xml
+# After publishing, replace YOUR-GITHUB-USERNAME and YOUR-REPO with the real GitHub Pages URL.
+Sitemap: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/sitemap.xml
