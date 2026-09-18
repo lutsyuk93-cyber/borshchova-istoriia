@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор борщу — розрахунок інгредієнтів на будь-яку кількість порцій | Борщова історія</title>
+    <meta name="description" content="Онлайн-калькулятор борщу: вкажи кількість людей і отримай точні пропорції інгредієнтів — м'ясо, буряк, картопля, капуста, спеції та вода.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a94432">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Борщова історія">
+    <meta property="og:title" content="Калькулятор борщу — інгредієнти на будь-яку кількість порцій">
+    <meta property="og:description" content="Вкажи кількість людей і миттєво отримай перерахований список інгредієнтів для борщу.">
+    <meta property="og:url" content="https://YOUR-DOMAIN.example/kalkulyator.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Калькулятор борщу",
+      "url": "https://YOUR-DOMAIN.example/kalkulyator.html",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Будь-яка",
+      "inLanguage": "uk-UA",
+      "description": "Калькулятор перераховує кількість інгредієнтів для борщу залежно від кількості порцій.",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "UAH"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1VVGTC3S6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H1VVGTC3S6');
+</script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">✦</span>
+            Борщова історія
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Рецепт</a>
+            <a href="kalkulyator.html" class="active">Калькулятор</a>
+            <a href="vydy-borschu.html">Види борщу</a>
+            <a href="serving.html">Подача</a>
+            <a href="porady.html">Поради</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero container">
+        <div class="hero-content">
+            <p class="eyebrow">Точні пропорції без підрахунків</p>
+
+            <h1>
+                Калькулятор
+                <span>борщу на будь-яку компанію</span>
+            </h1>
+
+            <p class="hero-description">
+                Готуєш на двох чи на велике застілля? Вкажи кількість
+                порцій — і калькулятор миттєво перерахує всі інгредієнти
+                за базовим рецептом класичного борщу.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#calc" class="button button-primary">Розрахувати інгредієнти</a>
+                <a href="index.html#steps" class="button button-secondary">Переглянути рецепт</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="recipe-note">
+                <p class="note-label">Як це працює</p>
+                <h2>База — 6 порцій</h2>
+                <p>
+                    Всі пропорції в калькуляторі побудовані на класичному
+                    рецепті з розрахунку на 6 порцій і масштабуються
+                    пропорційно.
+                </p>
+                <div class="note-bottom"><span class="note-icon">🧮</span><span>Від 1 до 30 порцій</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="calc">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Твій розрахунок</p>
+                <h2>Скільки людей ти годуєш?</h2>
+                <p>Введи кількість порцій або скористайся кнопками — список інгредієнтів оновиться автоматично.</p>
+            </div>
+
+            <div class="calc-panel">
+                <div class="calc-controls">
+                    <button type="button" class="calc-step-btn" id="calc-minus" aria-label="Зменшити кількість порцій">−</button>
+                    <div class="calc-input-wrap">
+                        <input type="number" id="calc-servings" value="6" min="1" max="30" step="1" inputmode="numeric" aria-label="Кількість порцій">
+                        <span>порцій</span>
+                    </div>
+                    <button type="button" class="calc-step-btn" id="calc-plus" aria-label="Збільшити кількість порцій">+</button>
+                </div>
+                <div class="calc-presets">
+                    <button type="button" class="calc-chip" data-servings="2">2</button>
+                    <button type="button" class="calc-chip" data-servings="4">4</button>
+                    <button type="button" class="calc-chip" data-servings="6">6</button>
+                    <button type="button" class="calc-chip" data-servings="10">10</button>
+                    <button type="button" class="calc-chip" data-servings="15">15</button>
+                    <button type="button" class="calc-chip" data-servings="20">20</button>
+                </div>
+            </div>
+
+            <div class="ingredient-grid calc-grid" id="calc-results">
+                <article class="ingredient-card">
+                    <div class="card-icon">🍖</div>
+                    <h3>Основа</h3>
+                    <ul class="ingredient-list">
+                        <li><span>М'ясо на кістці</span><strong data-item="meat">—</strong></li>
+                        <li><span>Вода</span><strong data-item="water">—</strong></li>
+                        <li><span>Лавровий лист</span><strong data-item="bayleaf">—</strong></li>
+                        <li><span>Сіль</span><strong>до смаку</strong></li>
+                    </ul>
+                </article>
+
+                <article class="ingredient-card">
+                    <div class="card-icon">🥕</div>
+                    <h3>Овочі</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Буряк</span><strong data-item="beet">—</strong></li>
+                        <li><span>Картопля</span><strong data-item="potato">—</strong></li>
+                        <li><span>Капуста</span><strong data-item="cabbage">—</strong></li>
+                        <li><span>Морква</span><strong data-item="carrot">—</strong></li>
+                        <li><span>Цибуля</span><strong data-item="onion">—</strong></li>
+                    </ul>
+                </article>
+
+                <article class="ingredient-card">
+                    <div class="card-icon">🌿</div>
+                    <h3>Для смаку</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Томатна паста</span><strong data-item="tomato">—</strong></li>
+                        <li><span>Олія</span><strong data-item="oil">—</strong></li>
+                        <li><span>Часник</span><strong data-item="garlic">—</strong></li>
+                        <li><span>Перець</span><strong>до смаку</strong></li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-symbol">🍲</span>
+                <div>
+                    <strong id="calc-pot-tip-title">Розмір каструлі</strong>
+                    <p id="calc-pot-tip">Для 6 порцій знадобиться каструля об'ємом приблизно 4–5 літрів.</p>
+                </div>
+            </div>
+
+            <div class="tip-box" style="border-left-color: var(--red)">
+                <span class="tip-symbol">⏱</span>
+                <div>
+                    <strong>Час приготування майже не змінюється</strong>
+                    <p>Більша кількість порцій впливає на об'єм інгредієнтів, але не на час варіння — бульйон все одно готується 60–90 хвилин. Виняток: дуже велика каструля може закипати довше.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Поширені запитання</p>
+                <h2>Про розрахунок порцій борщу</h2>
+            </div>
+            <div class="faq-grid">
+                <article class="faq-item">
+                    <h3>Скільки борщу виходить на одну порцію?</h3>
+                    <p>В середньому одна порція — це приблизно 350–400 мл готового борщу, тобто повна глибока тарілка.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>Чи можна готувати борщ без м'яса за цим розрахунком?</h3>
+                    <p>Так, просто заміни воду на овочевий бульйон, а кількість м'яса вкажи як 0 — решта пропорцій овочів залишається коректною.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>Що робити, якщо каструля менша за потрібний об'єм?</h3>
+                    <p>Зменш кількість порцій у калькуляторі до значення, яке відповідає об'єму каструлі, або готуй у два заходи.</p>
+                </article>
+                <article class="faq-item">
+                    <h3>Чи змінюється кількість спецій пропорційно?</h3>
+                    <p>Сіль і перець краще завжди додавати до смаку невеликими порціями, навіть якщо калькулятор показує велику кількість порцій.</p>
+                </article>
+            </div>
+            <div class="bottom-link">
+                <a href="index.html" class="button button-primary">← Перейти до повного рецепта</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Борщова історія</p>
+        <a href="#top">На початок ↑</a>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var BASE_SERVINGS = 6;
+    var BASE = {
+        meat:   { amount: 500,  unit: 'г',  round: 10 },
+        water:  { amount: 2.5,  unit: 'л',  round: 0.25 },
+        bayleaf:{ amount: 2,    unit: 'шт.', round: 1, minWhole: true },
+        beet:   { amount: 2,    unit: 'шт.', round: 1, minWhole: true },
+        potato: { amount: 4,    unit: 'шт.', round: 1, minWhole: true },
+        cabbage:{ amount: 300,  unit: 'г',  round: 25 },
+        carrot: { amount: 1,    unit: 'шт.', round: 1, minWhole: true },
+        onion:  { amount: 1,    unit: 'шт.', round: 1, minWhole: true },
+        tomato: { amount: 2,    unit: 'ст. л.', round: 0.5 },
+        oil:    { amount: 2,    unit: 'ст. л.', round: 0.5 },
+        garlic: { amount: 2.5,  unit: 'зубчики', round: 1, minWhole: true }
+    };
+
+    var input = document.getElementById('calc-servings');
+    var results = document.getElementById('calc-results');
+    var potTip = document.getElementById('calc-pot-tip');
+
+    function roundTo(value, step) {
+        if (!step) return value;
+        var rounded = Math.round(value / step) * step;
+        return rounded;
+    }
+
+    function formatNumber(n) {
+        var rounded = Math.round(n * 100) / 100;
+        return rounded.toString().replace('.', ',');
+    }
+
+    function render(servings) {
+        servings = Math.max(1, Math.min(30, servings));
+        var ratio = servings / BASE_SERVINGS;
+
+        Object.keys(BASE).forEach(function (key) {
+            var cfg = BASE[key];
+            var raw = cfg.amount * ratio;
+            var value = roundTo(raw, cfg.round);
+            if (cfg.minWhole) {
+                value = Math.max(1, Math.round(value));
+            }
+            var el = results.querySelector('[data-item="' + key + '"]');
+            if (el) {
+                el.textContent = formatNumber(value) + ' ' + cfg.unit;
+            }
+        });
+
+        var literWater = roundTo(2.5 * ratio, 0.25);
+        var potSize = Math.ceil((literWater + 1.5) * 2) / 2;
+        potTip.textContent = 'Для ' + servings + ' порцій знадобиться каструля об\u2019ємом приблизно ' + formatNumber(potSize) + '–' + formatNumber(potSize + 1) + ' літрів.';
+    }
+
+    function setServings(value) {
+        value = Math.max(1, Math.min(30, Math.round(value) || BASE_SERVINGS));
+        input.value = value;
+        render(value);
+    }
+
+    document.getElementById('calc-minus').addEventListener('click', function () {
+        setServings(parseInt(input.value, 10) - 1);
+    });
+    document.getElementById('calc-plus').addEventListener('click', function () {
+        setServings(parseInt(input.value, 10) + 1);
+    });
+    input.addEventListener('input', function () {
+        var v = parseInt(input.value, 10);
+        if (!isNaN(v)) render(Math.max(1, Math.min(30, v)));
+    });
+    input.addEventListener('change', function () {
+        setServings(parseInt(input.value, 10));
+    });
+    document.querySelectorAll('.calc-chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            setServings(parseInt(btn.getAttribute('data-servings'), 10));
+        });
+    });
+
+    render(BASE_SERVINGS);
+})();
+</script>
+
+</body>
+</html>
